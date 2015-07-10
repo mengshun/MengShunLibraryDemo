@@ -439,6 +439,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Hui Chen (P77E868YNV)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hui Chen (P77E868YNV)";
 				INFOPLIST_FILE = MengShunLibraryDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.archermind.mengshun;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -454,6 +455,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Hui Chen (P77E868YNV)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hui Chen (P77E868YNV)";
 				INFOPLIST_FILE = MengShunLibraryDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.archermind.mengshun;
 				PRODUCT_NAME = "$(TARGET_NAME)";

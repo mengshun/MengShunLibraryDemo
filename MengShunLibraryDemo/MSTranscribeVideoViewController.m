@@ -126,6 +126,20 @@
     _captureVideoPreviewLayer.frame = CGRectMake(0, 64, CGRectGetWidth([UIScreen mainScreen].bounds),  CGRectGetHeight([UIScreen mainScreen].bounds)-64-40);
     _captureVideoPreviewLayer.backgroundColor = [UIColor blackColor].CGColor;
     [self.view.layer addSublayer:_captureVideoPreviewLayer];
+    
+    
+    
+    UIView *boxView = [[UIView alloc]initWithFrame:CGRectMake(60, 150, 200, 200)];
+    boxView.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:boxView];
+    boxView.layer.masksToBounds = YES;
+    boxView.layer.borderWidth = 2;
+    boxView.layer.borderColor = [UIColor redColor].CGColor;
+    
+    
+    
+    
+    
 }
 - (void)captureOutput:(AVCaptureFileOutput *)captureOutput didStartRecordingToOutputFileAtURL:(NSURL *)fileURL fromConnections:(NSArray *)connections{
     NSLog(@"didStartRecording");
