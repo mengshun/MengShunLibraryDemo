@@ -15,6 +15,10 @@
 #import "MSSortViewController.h"
 #import "MSMultiselectTableViewController.h"
 #import "MSTranscribeVideoViewController.h"
+#import "MSStretchViewController.h"
+#import "MSLayoutConstraintViewController.h"
+#import "MSTableAnimationViewController.h"
+#import "MSCellLayoutViewController.h"
 
 
 #endif

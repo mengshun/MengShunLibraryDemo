@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -25,13 +24,11 @@
     self.window.backgroundColor = [UIColor whiteColor];
     
     
-    ViewController *vc = [[ViewController alloc]initWithStyle:UITableViewStylePlain];
+    id vc = NSClassFromString(@"ViewController").new;
     
     UINavigationController *nav= [[UINavigationController alloc]initWithRootViewController:vc];
     
     self.window.rootViewController = nav;
-    
-    
     
     return YES;
 }

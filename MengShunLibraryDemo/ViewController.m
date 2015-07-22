@@ -31,7 +31,7 @@
 
 #pragma mark - custom method
 - (void)initTitleArray{
-    NSArray *tmpArray = @[@"清空导航栏的颜色和导航线条",@"字体库",@"排序",@"表的多选",@"录制视频"];
+    NSArray *tmpArray = @[@"清空导航栏的颜色和导航线条",@"字体库",@"排序",@"表的多选",@"录制视频",@"拉伸图片",@"代码自动布局",@"表头拉伸动画",@"cell自动布局"];
     self.titleArray = [NSMutableArray arrayWithArray:tmpArray];
 }
 
@@ -86,12 +86,27 @@
             break;
         case 5:
         {
-            
+            vc = [MSStretchViewController new];
         }
             break;
         case 6:
         {
-            
+            vc = [MSLayoutConstraintViewController new];
+        }
+            break;
+        case 7:
+        {
+            vc = [MSTableAnimationViewController new];
+        }
+            break;
+        case 8:
+        {
+            vc = [MSCellLayoutViewController new];
+        }
+            break;
+        case 9:
+        {
+            vc = nil;
         }
             break;
         default:
