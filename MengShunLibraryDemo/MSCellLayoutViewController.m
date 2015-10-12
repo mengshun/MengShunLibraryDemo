@@ -58,6 +58,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     MSLayoutCell * cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     [cell setCellWithModel:self.dataArray[indexPath.row]];
+    [cell layoutIfNeeded];
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -76,6 +77,7 @@
         _tableView.dataSource = self;
         _tableView.delegate = self;
         _tableView.translatesAutoresizingMaskIntoConstraints = NO;
+        _tableView.estimatedRowHeight = 44.0f;
         [_tableView registerClass:[MSLayoutCell class] forCellReuseIdentifier:@"cell"];
     }
     return _tableView;

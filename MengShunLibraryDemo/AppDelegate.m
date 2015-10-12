@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "GlobalData.h"
+#import "LLLockViewController.h"
+#import "NetWorkShowTool.h"
 
 @interface AppDelegate ()
 
@@ -30,6 +33,16 @@
     
     self.window.rootViewController = nav;
     
+    
+    
+    [[AFNetworkReachabilityManager sharedManager]startMonitoring];
+    [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        [NetWorkShowTool showMessageWithStatus:status];
+    }];
+    
+    
+    
+    
     return YES;
 }
 
@@ -49,8 +62,34 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    // 手势解锁相关
+    NSString* pswd = [LLLockPassword loadLockPassword];
+    if (pswd) {
+        [self showLLLockViewController:LLLockViewTypeCheck];
+    } else {
+        [self showLLLockViewController:LLLockViewTypeCreate];
+    }
 }
-
+#pragma mark - 弹出手势解锁密码输入框
+- (void)showLLLockViewController:(LLLockViewType)type
+{
+    if(self.window.rootViewController.presentingViewController == nil){
+        
+        LLLockViewController *lockVC = [[LLLockViewController alloc] init];
+        lockVC.nLockViewType = type;
+        
+        NSLog(@"root = %@", self.window.rootViewController.class);
+        NSLog(@"lockVc isBeingPresented = %d", [lockVC isBeingPresented]);
+        
+       
+        
+        lockVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+        
+        [self.window.rootViewController presentViewController:lockVC animated:NO completion:^{
+        }];
+        NSLog(@"创建了一个pop=%@", lockVC);
+    }
+}
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }

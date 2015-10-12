@@ -41,12 +41,17 @@
 }
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    [_captureSession startRunning];
+    if (_controlBtn.enabled) {
+        [_captureSession startRunning];
+    }
+    
 }
 
 -(void)viewDidDisappear:(BOOL)animated{
     [super viewDidDisappear:animated];
-    [_captureSession stopRunning];
+    if (_controlBtn.enabled) {
+        [_captureSession stopRunning];
+    }
 }
 - (void)viewDidLoad {
     [super viewDidLoad];

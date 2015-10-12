@@ -19,6 +19,14 @@
 
 @implementation ViewController
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    NSLog(@"%s",__FUNCTION__);
+}
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    NSLog(@"%s",__FUNCTION__);
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Demo 列表";
@@ -46,6 +54,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     cell.textLabel.text = [NSString stringWithFormat:@"%d\t%@",(int)indexPath.row+1,self.titleArray[indexPath.row]];
+    [tableView setSeparatorInset:UIEdgeInsetsMake(0,5,0,5)];
+    [tableView setLayoutMargins:UIEdgeInsetsMake(0,5,0,5)];
     return cell;
 }
 

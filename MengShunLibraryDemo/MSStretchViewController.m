@@ -14,6 +14,11 @@
 
 @implementation MSStretchViewController
 
+
+- (void)recieveNoti{
+    NSLog(@"recieveNoti");
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
