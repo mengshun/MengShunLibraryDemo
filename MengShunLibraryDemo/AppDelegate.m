@@ -10,6 +10,7 @@
 #import "GlobalData.h"
 #import "LLLockViewController.h"
 #import "NetWorkShowTool.h"
+#import "LocationManager.h"
 
 @interface AppDelegate ()
 
@@ -27,6 +28,9 @@
     self.window.backgroundColor = [UIColor whiteColor];
     
     
+    
+    
+    
     id vc = NSClassFromString(@"ViewController").new;
     
     UINavigationController *nav= [[UINavigationController alloc]initWithRootViewController:vc];
@@ -41,6 +45,12 @@
     }];
     
     
+    LocationManager *location = [[LocationManager alloc]init];
+    [location currentAddressComletion:^(NSDictionary *dictionary) {
+        for (NSString *key in dictionary) {
+            NSLog(@"%@ : %@",key,dictionary[key]);
+        }
+    }];
     
     
     return YES;

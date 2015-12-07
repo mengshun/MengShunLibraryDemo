@@ -85,6 +85,7 @@
 		DE55B2121B58F35500637A97 /* CiecleLoading33@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE55B1EE1B58F35500637A97 /* CiecleLoading33@2x.png */; };
 		DE55B2131B58F35500637A97 /* CiecleLoading34@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE55B1EF1B58F35500637A97 /* CiecleLoading34@2x.png */; };
 		DE55B2141B58F35500637A97 /* CiecleLoading35@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE55B1F01B58F35500637A97 /* CiecleLoading35@2x.png */; };
+		DE5694791BE0591C00EAFA33 /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DE5694781BE0591C00EAFA33 /* LocationManager.m */; settings = {ASSET_TAGS = (); }; };
 		DE64CE481B4BB591005C83DC /* MSTranscribeVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE64CE471B4BB591005C83DC /* MSTranscribeVideoViewController.m */; };
 		DE64CE551B4FA92F005C83DC /* MSStretchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE64CE541B4FA92F005C83DC /* MSStretchViewController.m */; };
 		DE64CE581B4FA94A005C83DC /* stretch.png in Resources */ = {isa = PBXBuildFile; fileRef = DE64CE571B4FA94A005C83DC /* stretch.png */; };
@@ -242,6 +243,8 @@
 		DE55B1EE1B58F35500637A97 /* CiecleLoading33@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CiecleLoading33@2x.png"; sourceTree = "<group>"; };
 		DE55B1EF1B58F35500637A97 /* CiecleLoading34@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CiecleLoading34@2x.png"; sourceTree = "<group>"; };
 		DE55B1F01B58F35500637A97 /* CiecleLoading35@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CiecleLoading35@2x.png"; sourceTree = "<group>"; };
+		DE5694771BE0591C00EAFA33 /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
+		DE5694781BE0591C00EAFA33 /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
 		DE64CE461B4BB591005C83DC /* MSTranscribeVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTranscribeVideoViewController.h; sourceTree = "<group>"; };
 		DE64CE471B4BB591005C83DC /* MSTranscribeVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSTranscribeVideoViewController.m; sourceTree = "<group>"; };
 		DE64CE531B4FA92F005C83DC /* MSStretchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSStretchViewController.h; sourceTree = "<group>"; };
@@ -365,6 +368,8 @@
 		DE07BB4E1BCB97DF009AB809 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				DE5694771BE0591C00EAFA33 /* LocationManager.h */,
+				DE5694781BE0591C00EAFA33 /* LocationManager.m */,
 				DE07BB4F1BCB97FC009AB809 /* NetWorkShowTool.h */,
 				DE07BB501BCB97FC009AB809 /* NetWorkShowTool.m */,
 			);
@@ -903,6 +908,7 @@
 				DEF5D63F1B8EF52700BDFB50 /* GlobalData.m in Sources */,
 				DE55B1BD1B58E99700637A97 /* MJRefreshAutoGifFooter.m in Sources */,
 				DE55B1C91B58E99800637A97 /* UIScrollView+MJRefresh.m in Sources */,
+				DE5694791BE0591C00EAFA33 /* LocationManager.m in Sources */,
 				DE07BB431BCB97CE009AB809 /* AFURLRequestSerialization.m in Sources */,
 				DE07BB3F1BCB97CE009AB809 /* AFHTTPSessionManager.m in Sources */,
 				DE07BB4C1BCB97CE009AB809 /* UIRefreshControl+AFNetworking.m in Sources */,
